@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>FryCuisine – Explore Trending, Global & Healthy Food</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700;900&family=Sacramento&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+/* =============================================
+   FRYCUISINE – Full Responsive Template
+   ============================================= */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --dark:    #111111;
+  --dark2:   #1a1a1a;
+  --dark3:   #222222;
+  --gold:    #c8a465;
+  --red:     #c0392b;
+  --cream:   #f9f5ef;
+  --white:   #ffffff;
+  --muted:   #777777;
+  --border:  #e8e2d8;
+  --serif:   'Playfair Display', Georgia, serif;
+  --sans:    'Lato', sans-serif;
+  --script:  'Sacramento', cursive;
+  --radius:  6px;
+  --shadow:  0 2px 16px rgba(0,0,0,0.08);
+  --transition: 0.25s ease;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  color: #333;
+  background: #fff;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+ul { list-style: none; }
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ─── TOP BAR ─── */
+.top-bar {
+  background: var(--dark);
+  color: #aaa;
+  font-size: 12px;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-bar span { display: flex; align-items: center; gap: 6px; }
+.top-bar i { font-size: 11px; color: var(--gold); }
+
+/* ─── HEADER ─── */
+header {
+  background: var(--dark);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  gap: 20px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--dark);
+}
+.logo-text {
+  font-family: var(--sans);
+  font-size: 26px;
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+.logo-text b { font-weight: 900; }
+
+/* Search */
+.header-search {
+  flex: 1;
+  max-width: 340px;
+  position: relative;
+}
+.header-search input {
+  width: 100%;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 30px;
+  padding: 9px 44px 9px 18px;
+  color: #fff;
+  font-size: 13px;
+  font-family: var(--sans);
+  outline: none;
+  transition: border-color var(--transition);
+}
+.header-search input::placeholder { color: rgba(255,255,255,0.38); }
+.header-search input:focus { border-color: rgba(255,255,255,0.4); }
+.header-search .search-btn {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+.search-clear {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255,255,255,0.4);
+  cursor: pointer;
+  display: none;
+  font-size: 12px;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: var(--transition);
+}
+.hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* ─── NAV ─── */
+nav {
+  background: var(--dark2);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 0;
+}
+.nav-inner a {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: #bbb;
+  padding: 12px 15px;
+  display: block;
+  transition: color var(--transition);
+  white-space: nowrap;
+}
+.nav-inner a:hover { color: #fff; }
+.nav-inner a.active {
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: 20px;
+  padding: 6px 16px;
+  margin: 6px 2px;
+}
+
+/* Mobile nav */
+.mobile-nav {
+  display: none;
+  background: var(--dark2);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.mobile-nav a {
+  display: block;
+  padding: 13px 24px;
+  color: #bbb;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: color var(--transition), background var(--transition);
+}
+.mobile-nav a:hover,
+.mobile-nav a.active { color: #fff; background: rgba(255,255,255,0.06); }
+.mobile-nav.open { display: block; }
+
+/* ─── HERO ─── */
+.hero {
+  background: var(--dark);
+  position: relative;
+  overflow: hidden;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1400&q=80') center/cover no-repeat;
+  opacity: 0.35;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.55) 55%, rgba(10,10,10,0.1) 100%);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 560px;
+  padding: 70px 0;
+  animation: fadeUp 0.8s ease both;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-content h1 {
+  font-family: var(--serif);
+  font-size: clamp(30px, 5vw, 52px);
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+.hero-content p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(15px, 2vw, 18px);
+  color: rgba(255,255,255,0.82);
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+.hero-btns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid rgba(255,255,255,0.55);
+  border-radius: 30px;
+  padding: 11px 26px;
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+.hero-btn:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: #fff;
+}
+.hero-btn .arrow {
+  width: 24px; height: 24px;
+  border: 1.5px solid rgba(255,255,255,0.55);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px;
+}
+
+/* ─── SECTION COMMONS ─── */
+section { padding: 60px 0; }
+
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(22px, 3.5vw, 36px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+.section-title-script {
+  font-family: var(--script);
+  font-size: clamp(36px, 5vw, 58px);
+  color: var(--dark);
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 36px;
+  color: #ccc;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.section-divider.dark::before,
+.section-divider.dark::after { background: rgba(255,255,255,0.15); }
+
+/* ─── TRENDING FOOD GRID ─── */
+.trending { background: #fff; }
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.post-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.post-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  transform: translateY(-3px);
+}
+.post-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.post-card:hover .post-card-img { transform: scale(1.04); }
+.post-card-img-wrap { overflow: hidden; }
+
+.post-card-body { padding: 20px 22px 22px; }
+.post-card-meta {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-bottom: 8px;
+  display: flex;
+  gap: 10px;
+}
+.post-card-meta .cat {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #999;
+}
+.post-card h3 {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 400;
+  color: var(--red);
+  margin-bottom: 10px;
+  line-height: 1.3;
+  transition: color var(--transition);
+}
+.post-card:hover h3 { color: var(--dark); }
+.post-card p {
+  font-size: 13.5px;
+  color: #666;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+.read-more {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--dark);
+  border-bottom: 2px solid var(--dark);
+  padding-bottom: 1px;
+  transition: color var(--transition), border-color var(--transition);
+}
+.read-more:hover { color: var(--red); border-color: var(--red); }
+
+/* ─── WORLD FOOD BY COUNTRY ─── */
+.world-food {
+  background: var(--cream);
+  padding: 50px 0;
+}
+.world-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.world-header h2 {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.world-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+.world-divider::before,
+.world-divider::after {
+  content: '';
+  width: 80px;
+  height: 1px;
+  background: #ccc;
+}
+.world-divider span { color: var(--gold); font-size: 16px; }
+
+.country-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.country-card {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.country-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+.country-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.country-card-body {
+  padding: 14px 16px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.country-info { display: flex; align-items: center; gap: 10px; }
+.country-flag { font-size: 26px; line-height: 1; }
+.country-info h4 {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 2px;
+}
+.country-info p { font-size: 12px; color: var(--muted); }
+.country-read-btn {
+  background: var(--dark);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  border-radius: 3px;
+  transition: background var(--transition);
+  white-space: nowrap;
+}
+.country-read-btn:hover { background: var(--red); }
+
+/* ─── RECIPES SECTION ─── */
+.recipes { background: #fff; }
+.recipe-list { display: flex; flex-direction: column; gap: 0; }
+.recipe-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  padding: 30px 0;
+  align-items: center;
+}
+.recipe-item:first-child { border-top: 1px solid var(--border); }
+.recipe-item.reverse { direction: rtl; }
+.recipe-item.reverse > * { direction: ltr; }
+.recipe-text { padding-right: 40px; }
+.recipe-item.reverse .recipe-text { padding-right: 0; padding-left: 40px; }
+.recipe-meta {
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.recipe-text h3 {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.recipe-text p { font-size: 14px; color: #666; margin-bottom: 14px; line-height: 1.65; }
+.recipe-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+.view-more-wrap { text-align: center; margin-top: 32px; }
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid var(--dark);
+  border-radius: 3px;
+  padding: 11px 28px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--dark);
+  transition: all var(--transition);
+}
+.btn-outline:hover { background: var(--dark); color: #fff; }
+
+/* ─── DIET & HEALTHY ─── */
+.diet { background: var(--cream); }
+.diet-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.diet-card {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.diet-card:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+}
+.diet-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+.diet-card-body { padding: 18px 20px 20px; }
+.diet-card-body h3 {
+  font-family: var(--serif);
+  font-size: 18px;
+  color: var(--dark);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.diet-card-body p { font-size: 13px; color: #777; margin-bottom: 14px; line-height: 1.6; }
+.btn-dark {
+  display: inline-block;
+  background: var(--dark);
+  color: #fff;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border-radius: 3px;
+  transition: background var(--transition);
+}
+.btn-dark:hover { background: var(--red); }
+
+/* ─── EXPLORE BY CATEGORY ─── */
+.categories { background: #fff; }
+.cat-circles {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 16px;
+}
+.cat-circle {
+  text-align: center;
+  cursor: pointer;
+}
+.cat-circle-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 10px;
+  border: 3px solid transparent;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.cat-circle:hover .cat-circle-img {
+  border-color: var(--gold);
+  transform: scale(1.06);
+}
+.cat-circle span {
+  font-size: 12px;
+  font-weight: 700;
+  color: #444;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ─── LATEST FROM FRYCUISINE ─── */
+.latest { background: var(--cream); }
+.latest-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.latest-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.latest-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+.latest-card-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+.latest-card:hover .latest-card-img { transform: scale(1.05); }
+.latest-card-img-wrap { overflow: hidden; }
+.latest-card-body { padding: 14px 16px 16px; }
+.latest-card-body .meta {
+  font-size: 10.5px;
+  color: var(--muted);
+  margin-bottom: 6px;
+  display: flex;
+  gap: 8px;
+}
+.latest-card-body h4 {
+  font-family: var(--serif);
+  font-size: 14.5px;
+  color: var(--dark);
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+.latest-card-body p { font-size: 12px; color: #888; line-height: 1.55; }
+
+/* ─── WHY FRYCUISINE ─── */
+.why { background: #fff; }
+.why-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.why-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+}
+.why-text h2 {
+  font-family: var(--serif);
+  font-size: clamp(24px, 3vw, 38px);
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+.why-text p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+.why-features {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.why-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.why-feature-icon {
+  width: 38px;
+  height: 38px;
+  background: var(--cream);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--gold);
+  font-size: 15px;
+}
+.why-feature-text h5 {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--dark);
+  margin-bottom: 3px;
+}
+.why-feature-text p { font-size: 13px; color: var(--muted); margin: 0; }
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--dark);
+  color: #aaa;
+}
+.footer-main { padding: 60px 0 40px; }
+.footer-logo-wrap {
+  text-align: center;
+  margin-bottom: 50px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-logo-wrap .logo-text {
+  font-size: 32px;
+  display: inline-block;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-bottom: 50px;
+}
+.footer-col h4 {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 18px;
+}
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+.footer-col ul li a {
+  font-size: 13.5px;
+  color: #888;
+  transition: color var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.footer-col ul li a:hover { color: #fff; }
+.footer-col ul li a i { font-size: 9px; color: var(--gold); }
+
+.footer-social { display: flex; gap: 10px; flex-wrap: wrap; }
+.social-btn {
+  width: 38px; height: 38px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #aaa;
+  font-size: 14px;
+  transition: all var(--transition);
+}
+.social-btn:hover { background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.4); }
+
+/* Newsletter */
+.footer-newsletter {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 44px 0 32px;
+}
+.footer-newsletter h3 {
+  font-family: var(--serif);
+  font-size: clamp(20px, 3vw, 28px);
+  color: #fff;
+  margin-bottom: 10px;
+}
+.footer-newsletter p {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 24px;
+  letter-spacing: 0.3px;
+}
+.footer-newsletter p span {
+  margin: 0 12px;
+  color: #555;
+}
+.subscribe-form {
+  display: flex;
+  max-width: 440px;
+  margin: 0 auto;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 30px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.04);
+}
+.subscribe-form input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 13px 20px;
+  font-size: 13.5px;
+  font-family: var(--sans);
+  outline: none;
+}
+.subscribe-form input::placeholder { color: rgba(255,255,255,0.3); }
+.subscribe-form button {
+  background: var(--red);
+  color: #fff;
+  border: none;
+  padding: 13px 24px;
+  font-family: var(--sans);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background var(--transition);
+}
+.subscribe-form button:hover { background: #a93226; }
+
+.footer-bottom {
+  background: rgba(0,0,0,0.3);
+  padding: 14px 0;
+  text-align: center;
+  font-size: 12px;
+  color: #555;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.footer-bottom a { color: #666; }
+.footer-bottom a:hover { color: #aaa; }
+
+/* ─── SCROLL TO TOP ─── */
+.scroll-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 42px;
+  height: 42px;
+  background: var(--red);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition), transform var(--transition);
+  z-index: 999;
+}
+.scroll-top.visible { opacity: 1; pointer-events: auto; }
+.scroll-top:hover { transform: translateY(-3px); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  .cat-circles { grid-template-columns: repeat(4, 1fr); }
+  .latest-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .top-bar .container { flex-direction: column; gap: 4px; text-align: center; }
+  .header-search { display: none; }
+  .hamburger { display: flex; }
+  nav { display: none; }
+
+  .hero-content { padding: 50px 0; }
+
+  .posts-grid { grid-template-columns: 1fr; }
+  .country-grid { grid-template-columns: 1fr; }
+  .recipe-item { grid-template-columns: 1fr; gap: 16px; }
+  .recipe-item.reverse { direction: ltr; }
+  .recipe-item.reverse .recipe-text { padding-left: 0; }
+  .recipe-text { padding-right: 0 !important; }
+  .recipe-img { height: 220px; }
+  .diet-grid { grid-template-columns: 1fr; }
+  .cat-circles { grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .cat-circle-img { width: 70px; height: 70px; }
+  .latest-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-inner { grid-template-columns: 1fr; }
+  .why-img { height: 250px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .cat-circles { grid-template-columns: repeat(3, 1fr); }
+  .latest-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero-btns { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <span><i class="fa-solid fa-fire"></i> Trending Recipes Daily</span>
+    <span><i class="fa-solid fa-globe"></i> World Cuisine &nbsp;|&nbsp; <i class="fa-solid fa-leaf"></i> Healthy Diets &nbsp;|&nbsp; <i class="fa-solid fa-book-open"></i> Easy Recipes</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="container header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon"><i class="fa-solid fa-utensils"></i></div>
+      <div class="logo-text">fry<b>cuisine</b></div>
+    </a>
+
+    <div class="header-search">
+      <input type="text" id="headerSearch" placeholder="Search recipes, cuisines…" oninput="toggleClear(this)"/>
+      <span class="search-clear" id="searchClear" onclick="clearSearch()"><i class="fa-solid fa-xmark"></i></span>
+      <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- DESKTOP NAV -->
+<nav>
+  <div class="container nav-inner">
+    <a href="#">Home</a>
+    <a href="#trending">Trending food</a>
+    <a href="#recipes">Recipes</a>
+    <a href="#world" class="active">World cuisine</a>
+    <a href="#diet">Diet &amp; healthy</a>
+    <a href="#categories">Food blog</a>
+    <a href="#why">About</a>
+    <a href="#footer">Contact</a>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#">Home</a>
+  <a href="#trending">Trending food</a>
+  <a href="#recipes">Recipes</a>
+  <a href="#world" class="active">World cuisine</a>
+  <a href="#diet">Diet &amp; healthy</a>
+  <a href="#categories">Food blog</a>
+  <a href="#why">About</a>
+  <a href="#footer">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <h1>Explore Trending, Global &amp; Healthy Food at FryCuisine</h1>
+      <p>From viral food trends and world-famous dishes to healthy diets and easy recipes — everything about food in one place.</p>
+      <div class="hero-btns">
+        <a href="#world" class="hero-btn">World cuisine <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
+        <a href="#diet" class="hero-btn">Diet Food <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRENDING FOOD -->
+<section class="trending" id="trending">
+  <div class="container">
+    <h2 class="section-title">Trending Food Right Now</h2>
+    <div class="section-divider"><span>✦</span></div>
+
+    <div class="posts-grid">
+
+      <div class="post-card">
+        <div class="post-card-img-wrap">
+          <img class="post-card-img" src="https://images.unsplash.com/photo-1619894991209-9f9694be045a?w=700&q=80" alt="Korean Corn Dogs"/>
+        </div>
+        <div class="post-card-body">
+          <div class="post-card-meta"><span>January 1, 2026</span><span class="cat">Trending</span></div>
+          <h3>Korean Corn Dogs</h3>
+          <p>Crispy outside, cheesy inside! Golden fried corn dogs with gooey cheese and bold Korean flavors.</p>
+          <a href="#" class="read-more">Read More…</a>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <div class="post-card-img-wrap">
+          <img class="post-card-img" src="https://images.unsplash.com/photo-1611690078553-f540df885073?w=700&q=80" alt="Dubai Chocolate Bar"/>
+        </div>
+        <div class="post-card-body">
+          <div class="post-card-meta"><span>January 1, 2026</span><span class="cat">Trending</span></div>
+          <h3>Dubai Chocolate Bar</h3>
+          <p>Luxury in every bite. Rich chocolate layered with premium fillings inspired by Dubai desserts.</p>
+          <a href="#" class="read-more">Read More…</a>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <div class="post-card-img-wrap">
+          <img class="post-card-img" src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=700&q=80" alt="Viral Street Momo"/>
+        </div>
+        <div class="post-card-body">
+          <div class="post-card-meta"><span>January 2, 2026</span><span class="cat">Trending</span></div>
+          <h3>Viral Street Momo</h3>
+          <p>The internet's favorite street snack. Juicy Momo tossed in spicy sauces, full of desi street-style flavor.</p>
+          <a href="#" class="read-more">Read More…</a>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <div class="post-card-img-wrap">
+          <img class="post-card-img" src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=700&q=80" alt="Japanese Soufflé Pancakes"/>
+        </div>
+        <div class="post-card-body">
+          <div class="post-card-meta"><span>January 2, 2026</span><span class="cat">Trending</span></div>
+          <h3>Japanese Soufflé Pancakes</h3>
+          <p>Soft, fluffy &amp; cloud-like. Light-as-air pancakes that melt in your mouth with every bite.</p>
+          <a href="#" class="read-more">Read More…</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WORLD FOOD BY COUNTRY -->
+<section class="world-food" id="world">
+  <div class="container">
+    <div class="world-header">
+      <h2>World Famous Food by Country</h2>
+      <div class="world-divider"><span>✦</span></div>
+    </div>
+    <div class="country-grid">
+
+      <div class="country-card">
+        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&q=80" alt="India"/>
+        <div class="country-card-body">
+          <div class="country-info">
+            <span class="country-flag">🇮🇳</span>
+            <div>
+              <h4>India</h4>
+              <p>Butter Chicken, Dosa</p>
+            </div>
+          </div>
+          <a href="#" class="country-read-btn">Read More</a>
+        </div>
+      </div>
+
+      <div class="country-card">
+        <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=600&q=80" alt="Korea"/>
+        <div class="country-card-body">
+          <div class="country-info">
+            <span class="country-flag">🇰🇷</span>
+            <div>
+              <h4>Korea</h4>
+              <p>Kimchi, Bibimbap</p>
+            </div>
+          </div>
+          <a href="#" class="country-read-btn">Read More</a>
+        </div>
+      </div>
+
+      <div class="country-card">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80" alt="Italy"/>
+        <div class="country-card-body">
+          <div class="country-info">
+            <span class="country-flag">🇮🇹</span>
+            <div>
+              <h4>Italy</h4>
+              <p>Pizza &amp; Pasta</p>
+            </div>
+          </div>
+          <a href="#" class="country-read-btn">Read More</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RECIPES SECTION -->
+<section class="recipes" id="recipes">
+  <div class="container">
+    <h2 class="section-title">Recipes Section</h2>
+    <div class="section-divider"><span>✦</span></div>
+
+    <div class="recipe-list">
+
+      <div class="recipe-item">
+        <div class="recipe-text">
+          <div class="recipe-meta">January 18, 2026 &mdash; Street Food</div>
+          <h3>Masala Frankie Roll</h3>
+          <p>Spicy vegetable stuffing wrapped in soft roti with tangy chutneys. Loaded with fresh veggies and Indian spices for bold taste. A quick and filling street-style meal.</p>
+          <a href="#" class="read-more">Continue Reading</a>
+        </div>
+        <img class="recipe-img" src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80" alt="Masala Frankie Roll"/>
+      </div>
+
+      <div class="recipe-item reverse">
+        <div class="recipe-text">
+          <div class="recipe-meta">January 20, 2026 &mdash; Healthy</div>
+          <h3>Fruit Yogurt Bowl</h3>
+          <p>Fresh seasonal fruits blended with creamy low-fat yogurt. Rich in vitamins, proteins and natural sweetness. A refreshing and nutritious anytime snack.</p>
+          <a href="#" class="read-more">Continue Reading</a>
+        </div>
+        <img class="recipe-img" src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=80" alt="Fruit Yogurt Bowl"/>
+      </div>
+
+      <div class="recipe-item">
+        <div class="recipe-text">
+          <div class="recipe-meta">January 22, 2026 &mdash; Healthy</div>
+          <h3>Air Fryer Paneer Tikka</h3>
+          <p>Marinated paneer grilled to smoky perfection in air fryer. Low on oil, full of spicy and rich flavors. Great healthy alternative to fried snacks.</p>
+          <a href="#" class="read-more">Continue Reading</a>
+        </div>
+        <img class="recipe-img" src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600&q=80" alt="Air Fryer Paneer Tikka"/>
+      </div>
+
+      <div class="recipe-item reverse">
+        <div class="recipe-text">
+          <div class="recipe-meta">January 25, 2026 &mdash; World Cuisine</div>
+          <h3>Dal Tadka &amp; Rice</h3>
+          <p>Slow cooked lentils tempered with aromatic Indian spices. Served with steamed rice for comforting homemade taste. Simple, nutritious and satisfying everyday meal.</p>
+          <a href="#" class="read-more">Continue Reading</a>
+        </div>
+        <img class="recipe-img" src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&q=80" alt="Dal Tadka"/>
+      </div>
+
+    </div>
+
+    <div class="view-more-wrap">
+      <a href="#" class="btn-outline">View More <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- DIET & HEALTHY -->
+<section class="diet" id="diet">
+  <div class="container">
+    <h2 class="section-title">Diet &amp; Healthy Food Guides</h2>
+    <div class="section-divider"><span>✦</span></div>
+    <div class="diet-grid">
+
+      <div class="diet-card">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80" alt="Weight Loss Diet"/>
+        <div class="diet-card-body">
+          <h3>Weight Loss Diet Foods</h3>
+          <p>Quinoa Top Salad Bowl. Fresh vegetables with quinoa and light dressing. Perfect for healthy weight loss and digestion.</p>
+          <a href="#" class="btn-dark">Read More</a>
+        </div>
+      </div>
+
+      <div class="diet-card">
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=80" alt="High Protein Diet"/>
+        <div class="diet-card-body">
+          <h3>High Protein Diet Foods</h3>
+          <p>Power Protein Power Bowl. High protein meals with veggies and healthy options. Keeps you full and boosts energy.</p>
+          <a href="#" class="btn-dark">Read More</a>
+        </div>
+      </div>
+
+      <div class="diet-card">
+        <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=600&q=80" alt="Keto Food"/>
+        <div class="diet-card-body">
+          <h3>Keto Food List</h3>
+          <p>Avocado Egg Keto Plate. Low carb eggs and avocado for the keto lifestyle. Supports fat burning and energy.</p>
+          <a href="#" class="btn-dark">Read More</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORE BY CATEGORY -->
+<section class="categories" id="categories">
+  <div class="container">
+    <div style="text-align:center; margin-bottom: 10px;">
+      <h2 class="section-title" style="display:inline-block; letter-spacing:1px; font-size:clamp(20px,3vw,32px);">Explore Food By</h2>
+      <div class="section-title-script">Category</div>
+    </div>
+    <div class="section-divider"><span>✦</span></div>
+
+    <div class="cat-circles">
+      <div class="cat-circle">
+        <img class="cat-circle-img" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&q=80" alt="Street Food"/>
+        <span>Street Food</span>
+      </div>
+      <div class="cat-circle">
+        <img class="cat-circle-img" src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=300&q=80" alt="Fast Food"/>
+        <span>Fast Food</span>
+      </div>
+      <div class="cat-circle">
+        <img class="cat-circle-img" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300&q=80" alt="Vegan Food"/>
+        <span>Vegan Food</span>
+      </div>
+      <div class="cat-circle">
+        <img class="cat-circle-img" src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=300&q=80" alt="Fried Food"/>
+        <span>Fried Food</span>
+      </div>
+      <div class="cat-circle">
+        <img class="cat-circle-img" src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=300&q=80" alt="Desserts"/>
+        <span>Desserts</span>
+      </div>
+      <div class="cat-circle">
+        <img class="cat-circle-img" src="https://images.unsplash.com/photo-1544025162-d76694265947?w=300&q=80" alt="Snacks"/>
+        <span>Snacks</span>
+      </div>
+      <div class="cat-circle">
+        <img class="cat-circle-img" src="https://images.unsplash.com/photo-1533089860892-a7c6f10a081a?w=300&q=80" alt="Breakfast"/>
+        <span>Breakfast</span>
+      </div>
+      <div class="cat-circle">
+        <img class="cat-circle-img" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=300&q=80" alt="Dinner"/>
+        <span>Dinner</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LATEST FROM FRYCUISINE -->
+<section class="latest" id="latest">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:6px;">
+      <span style="font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#999;">Latest from</span>
+      <div class="section-title-script" style="text-align:center;">Frycuisine</div>
+    </div>
+    <div class="section-divider"><span>✦</span></div>
+
+    <div class="latest-grid">
+
+      <div class="latest-card">
+        <div class="latest-card-img-wrap">
+          <img class="latest-card-img" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&q=80" alt="Mexican Wrap"/>
+        </div>
+        <div class="latest-card-body">
+          <div class="meta"><span>Jan 10</span><span>·</span><span>Street Food</span></div>
+          <h4>Mexican Wrap Tacos</h4>
+          <p>Spicy fillings wrapped in soft tortillas for perfect bites.</p>
+        </div>
+      </div>
+
+      <div class="latest-card">
+        <div class="latest-card-img-wrap">
+          <img class="latest-card-img" src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=500&q=80" alt="Green Salad Bowl"/>
+        </div>
+        <div class="latest-card-body">
+          <div class="meta"><span>Jan 14</span><span>·</span><span>Diet Tips</span></div>
+          <h4>Power of Avocado Salad</h4>
+          <p>Rich in healthy fats and essential nutrients.</p>
+        </div>
+      </div>
+
+      <div class="latest-card">
+        <div class="latest-card-img-wrap">
+          <img class="latest-card-img" src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=500&q=80" alt="Noodles"/>
+        </div>
+        <div class="latest-card-body">
+          <div class="meta"><span>Jan 18</span><span>·</span><span>Trending Food</span></div>
+          <h4>Classic Comfort Noodles</h4>
+          <p>Classic Asian comfort food made with rich flat noodles.</p>
+        </div>
+      </div>
+
+      <div class="latest-card">
+        <div class="latest-card-img-wrap">
+          <img class="latest-card-img" src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=500&q=80" alt="Spicy Chicken"/>
+        </div>
+        <div class="latest-card-body">
+          <div class="meta"><span>Jan 22</span><span>·</span><span>Trending Food</span></div>
+          <h4>Spicy Antenna Chaat</h4>
+          <p>India's favourite street chaat, loaded with chutneys.</p>
+        </div>
+      </div>
+
+      <div class="latest-card">
+        <div class="latest-card-img-wrap">
+          <img class="latest-card-img" src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=500&q=80" alt="Burger"/>
+        </div>
+        <div class="latest-card-body">
+          <div class="meta"><span>Jan 26</span><span>·</span><span>Trending Food</span></div>
+          <h4>Cheese Barn Burger</h4>
+          <p>Loaded with melted cheese and fresh garden veggies.</p>
+        </div>
+      </div>
+
+      <div class="latest-card">
+        <div class="latest-card-img-wrap">
+          <img class="latest-card-img" src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=500&q=80" alt="French Toast"/>
+        </div>
+        <div class="latest-card-body">
+          <div class="meta"><span>Jan 28</span><span>·</span><span>Diet Tips</span></div>
+          <h4>Oats &amp; Egg Breakfast Bowl</h4>
+          <p>Light, healthy breakfast for better energy and weight control.</p>
+        </div>
+      </div>
+
+      <div class="latest-card">
+        <div class="latest-card-img-wrap">
+          <img class="latest-card-img" src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=500&q=80" alt="Steamed Momo"/>
+        </div>
+        <div class="latest-card-body">
+          <div class="meta"><span>Feb 2</span><span>·</span><span>Trending Food</span></div>
+          <h4>Steamed Veg Momos</h4>
+          <p>Soft steaming hot momos, a fan-favourite snack everywhere.</p>
+        </div>
+      </div>
+
+      <div class="latest-card">
+        <div class="latest-card-img-wrap">
+          <img class="latest-card-img" src="https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?w=500&q=80" alt="Veggie Sandwich"/>
+        </div>
+        <div class="latest-card-body">
+          <div class="meta"><span>Feb 5</span><span>·</span><span>Trending Food</span></div>
+          <h4>London Veggie Classic Sandwich</h4>
+          <p>Stacked with avocado, roasted veggies and melted cheese.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY FRYCUISINE -->
+<section class="why" id="why">
+  <div class="container">
+    <div class="why-inner">
+      <img class="why-img" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Why FryCuisine"/>
+      <div class="why-text">
+        <h2>Why Food Lovers Choose FryCuisine</h2>
+        <p>FryCuisine brings you global food coverage in a simple and easy way. From easy recipes and real food guides to trending and viral food updates, everything is shared in a clean and honest style.</p>
+        <p>The content is created to help food lovers explore new dishes, learn quickly, and enjoy authentic food stories without any complicated text.</p>
+        <div class="why-features">
+          <div class="why-feature">
+            <div class="why-feature-icon"><i class="fa-solid fa-fire"></i></div>
+            <div class="why-feature-text">
+              <h5>Trending Every Day</h5>
+              <p>We cover the hottest viral food trends from around the internet.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon"><i class="fa-solid fa-globe"></i></div>
+            <div class="why-feature-text">
+              <h5>Global Coverage</h5>
+              <p>World-famous dishes from India, Korea, Italy, Mexico and more.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon"><i class="fa-solid fa-leaf"></i></div>
+            <div class="why-feature-text">
+              <h5>Healthy Guides</h5>
+              <p>Diet plans, keto lists, and protein-rich meals for every lifestyle.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-main">
+    <div class="container">
+
+      <div class="footer-logo-wrap">
+        <div class="logo-text">fry<b>cuisine</b> <i class="fa-solid fa-utensils" style="font-size:18px; color: var(--gold);"></i></div>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#"><i class="fa-solid fa-circle-dot"></i> Trending Food</a></li>
+            <li><a href="#"><i class="fa-solid fa-circle-dot"></i> World Cuisine</a></li>
+            <li><a href="#"><i class="fa-solid fa-circle-dot"></i> Diet Food</a></li>
+            <li><a href="#"><i class="fa-solid fa-circle-dot"></i> Recipes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="#"><i class="fa-solid fa-circle-dot"></i> Indian Food</a></li>
+            <li><a href="#"><i class="fa-solid fa-circle-dot"></i> Street Food</a></li>
+            <li><a href="#"><i class="fa-solid fa-circle-dot"></i> Healthy Food</a></li>
+            <li><a href="#"><i class="fa-solid fa-circle-dot"></i> Desserts</a></li>
+            <li><a href="#"><i class="fa-solid fa-circle-dot"></i> Snacks</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#"><i class="fa-solid fa-circle-dot"></i> About</a></li>
+            <li><a href="#"><i class="fa-solid fa-circle-dot"></i> Blog</a></li>
+            <li><a href="#"><i class="fa-solid fa-circle-dot"></i> Contact</a></li>
+            <li><a href="#"><i class="fa-solid fa-circle-dot"></i> Privacy Policy</a></li>
+            <li><a href="#"><i class="fa-solid fa-circle-dot"></i> Disclaimer</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="footer-social">
+            <a href="#" class="social-btn" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-btn" title="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#" class="social-btn" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-newsletter">
+        <h3>Join FryCuisine – Food Stories in Your Inbox</h3>
+        <p>Trending food updates <span>|</span> Healthy diet tips <span>|</span> World cuisine articles</p>
+        <form class="subscribe-form" onsubmit="handleSubscribe(event)">
+          <input type="email" id="subscribeEmail" placeholder="Enter your email…" required/>
+          <button type="submit"><i class="fa-solid fa-bell"></i> Subscribe</button>
+        </form>
+        <p id="subscribeMsg" style="margin-top:14px; color: var(--gold); font-size:13px; display:none;">🎉 Thank you for subscribing!</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      &copy; 2026 <a href="#">FryCuisine</a> &mdash; All rights reserved. Made with <span style="color:var(--red)">&#9829;</span> for food lovers.
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script>
+// ─── MOBILE MENU ───
+function toggleMenu() {
+  const nav = document.getElementById('mobileNav');
+  const btn = document.getElementById('hamburger');
+  nav.classList.toggle('open');
+  btn.classList.toggle('open');
+}
+
+// Close mobile menu when a link is clicked
+document.querySelectorAll('.mobile-nav a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.getElementById('mobileNav').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+  });
+});
+
+// ─── SEARCH CLEAR BUTTON ───
+function toggleClear(input) {
+  document.getElementById('searchClear').style.display = input.value ? 'block' : 'none';
+}
+function clearSearch() {
+  const inp = document.getElementById('headerSearch');
+  inp.value = '';
+  document.getElementById('searchClear').style.display = 'none';
+  inp.focus();
+}
+
+// ─── SCROLL TO TOP ───
+const scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => {
+  scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+});
+
+// ─── SUBSCRIBE FORM ───
+function handleSubscribe(e) {
+  e.preventDefault();
+  const email = document.getElementById('subscribeEmail').value;
+  if (email) {
+    document.getElementById('subscribeMsg').style.display = 'block';
+    document.getElementById('subscribeEmail').value = '';
+    setTimeout(() => {
+      document.getElementById('subscribeMsg').style.display = 'none';
+    }, 4000);
+  }
+}
+
+// ─── ACTIVE NAV ON SCROLL ───
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-inner a, .mobile-nav a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(sec => {
+    const top = sec.offsetTop - 120;
+    if (window.scrollY >= top) current = sec.getAttribute('id');
+  });
+  navLinks.forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+  });
+});
+
+// ─── SMOOTH SCROLL FOR NAV LINKS ───
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const offset = 70;
+      window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+    }
+  });
+});
+
+// ─── LAZY FADE-IN ON SCROLL ───
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.post-card, .country-card, .diet-card, .latest-card, .recipe-item, .why-feature').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
