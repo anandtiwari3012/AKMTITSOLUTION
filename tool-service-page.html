@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>
+        Industrial Tool Repair Services
+    </title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:
+                Arial, sans-serif;
+        }
+
+        body {
+
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.7;
+
+        }
+
+        .container {
+
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+
+        }
+
+        section {
+
+            padding: 90px 0;
+
+        }
+
+        h1,
+        h2,
+        h3 {
+
+            margin-bottom: 20px;
+
+        }
+
+        .section-title {
+
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 60px;
+
+        }
+
+        .btn {
+
+            display: inline-block;
+
+            padding: 15px 30px;
+
+            background: #0058ff;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 6px;
+
+            font-weight: bold;
+
+            transition: .3s;
+
+        }
+
+        .btn:hover {
+
+            background: #0044c7;
+
+        }
+
+
+
+        /* HERO */
+
+        .hero {
+
+            background:
+
+                linear-gradient(rgba(0, 0, 0, .75),
+                    rgba(0, 0, 0, .75)),
+
+                url("https://images.unsplash.com/photo-1504307651254-35680f356dfd"
+                );
+
+            background-size: cover;
+
+            background-position: center;
+
+            color: white;
+
+        }
+
+        .hero-wrap {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 50px;
+
+            flex-wrap: wrap;
+
+        }
+
+        .hero-left {
+
+            flex: 1;
+            min-width: 320px;
+
+        }
+
+        .hero-right {
+
+            flex: 1;
+
+        }
+
+        .hero-right img {
+
+            width: 100%;
+
+            border-radius: 15px;
+
+        }
+
+        .badges {
+
+            display: flex;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+
+            margin-top: 25px;
+
+        }
+
+        .badge {
+
+            padding: 10px 18px;
+
+            background:
+                rgba(255, 255, 255, .12);
+
+            border-radius: 50px;
+
+        }
+
+
+
+        /* SERVICE CARDS */
+
+
+        .service-grid {
+
+            display: grid;
+
+            grid-template-columns:
+
+                repeat(auto-fit,
+                    minmax(280px, 1fr));
+
+            gap: 35px;
+
+        }
+
+        .service-card {
+
+            background: white;
+
+            border-radius: 16px;
+
+            overflow: hidden;
+
+            box-shadow:
+
+                0 10px 30px rgba(0, 0, 0, .08);
+
+            transition: .3s;
+
+        }
+
+        .service-card:hover {
+
+            transform:
+
+                translateY(-8px);
+
+        }
+
+        .service-card img {
+
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: cover;
+
+        }
+
+        .service-content {
+
+            padding: 30px;
+
+        }
+
+
+
+        /* WHY US */
+
+
+        .cards {
+
+            display: grid;
+
+            grid-template-columns:
+
+                repeat(auto-fit,
+                    minmax(250px, 1fr));
+
+            gap: 25px;
+
+        }
+
+        .card {
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 14px;
+
+            text-align: center;
+
+            box-shadow:
+
+                0 5px 20px rgba(0, 0, 0, .05);
+
+        }
+
+
+
+        /* PROCESS */
+
+
+        .process {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+        }
+
+        .step {
+
+            width: 220px;
+
+            text-align: center;
+
+            padding: 20px;
+
+        }
+
+        .circle {
+
+            width: 110px;
+
+            height: 110px;
+
+            margin: auto;
+
+            border-radius: 50%;
+
+            background: #0058ff;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-weight: bold;
+
+            color: white;
+
+            animation:
+
+                pulse 2s infinite;
+
+        }
+
+        .connector {
+
+            height: 4px;
+
+            width: 80px;
+
+            background:
+
+                linear-gradient(90deg,
+                    #0058ff,
+                    #69a3ff);
+
+        }
+
+        @keyframes pulse {
+
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+
+        }
+
+
+
+        /* FORM */
+
+
+        .form-box {
+
+            background: white;
+
+            padding: 45px;
+
+            border-radius: 14px;
+
+            box-shadow:
+
+                0 5px 20px rgba(0, 0, 0, .05);
+
+        }
+
+        input,
+        textarea,
+        select {
+
+            width: 100%;
+
+            padding: 14px;
+
+            margin-bottom: 15px;
+
+            border:
+
+                1px solid #ddd;
+
+            border-radius: 6px;
+
+        }
+
+        textarea {
+
+            height: 130px;
+
+        }
+
+
+
+        /* FAQ */
+
+
+        .faq {
+
+            background: white;
+
+            margin-bottom: 15px;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+        }
+
+        .faq-q {
+
+            padding: 20px;
+
+            cursor: pointer;
+
+            font-weight: bold;
+
+        }
+
+        .faq-a {
+
+            display: none;
+
+            padding:
+
+                0 20px 20px;
+
+        }
+
+
+
+        /* CTA */
+
+        .cta {
+
+            background: #111;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 90px 20px;
+
+        }
+
+
+
+        /* Sticky */
+
+        .sticky {
+
+            position: fixed;
+
+            bottom: 20px;
+
+            right: 20px;
+
+        }
+
+        .sticky a {
+
+            padding: 18px 25px;
+
+            background: #ff6500;
+
+            border-radius: 50px;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+        }
+
+
+        footer {
+
+            background: #000;
+
+            color: white;
+
+            padding: 40px;
+
+            text-align: center;
+
+        }
+
+
+        @media(max-width:950px) {
+
+            .process {
+
+                flex-direction: column;
+
+            }
+
+            .connector {
+
+                width: 4px;
+                height: 70px;
+
+            }
+
+            .hero-wrap {
+
+                flex-direction: column;
+
+            }
+
+        }
+
+        .why-us {
+
+            background: white;
+
+        }
+
+
+
+        .why-grid {
+
+            display: grid;
+
+            grid-template-columns:
+
+                repeat(auto-fit,
+                    minmax(450px, 1fr));
+
+            gap: 30px;
+
+        }
+
+
+
+        .why-card {
+
+            background: #fff;
+
+            padding: 35px;
+
+            border-radius: 16px;
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 25px;
+
+            box-shadow:
+
+                0 8px 25px rgba(0, 0, 0, .06);
+
+            transition: .35s;
+
+            border-left:
+
+                5px solid #0058ff;
+
+        }
+
+
+
+        .why-card:hover {
+
+            transform:
+
+                translateY(-6px);
+
+            box-shadow:
+
+                0 15px 35px rgba(0, 0, 0, .1);
+
+        }
+
+
+
+        .why-icon {
+
+            width: 70px;
+
+            height: 70px;
+
+            min-width: 70px;
+
+            border-radius: 50%;
+
+            background: #0058ff;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 24px;
+
+            font-weight: bold;
+
+            color: white;
+
+        }
+
+
+
+        .why-content h3 {
+
+            margin-bottom: 12px;
+
+        }
+
+
+
+        .why-content p {
+
+            color: #666;
+
+            line-height: 1.8;
+
+        }
+
+
+
+        @media(max-width:768px) {
+
+            .why-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+        .industries {
+
+            background: #f6f8fc;
+
+        }
+
+
+
+        .section-sub {
+
+            text-align: center;
+
+            max-width: 700px;
+
+            margin: auto;
+
+            margin-bottom: 60px;
+
+            color: #666;
+
+        }
+
+
+
+        .industry-grid {
+
+            display: grid;
+
+            grid-template-columns:
+
+                repeat(auto-fit,
+                    minmax(320px, 1fr));
+
+            gap: 30px;
+
+        }
+
+
+
+        .industry-card {
+
+            background: white;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow:
+
+                0 8px 25px rgba(0, 0, 0, .06);
+
+            transition: .35s;
+
+        }
+
+
+
+        .industry-card:hover {
+
+            transform:
+
+                translateY(-8px);
+
+        }
+
+
+
+        .industry-image {
+
+            height: 220px;
+
+            overflow: hidden;
+
+        }
+
+
+
+        .industry-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: .4s;
+
+        }
+
+
+
+        .industry-card:hover img {
+
+            transform: scale(1.08);
+
+        }
+
+
+
+        .industry-content {
+
+            padding: 30px;
+
+        }
+
+
+
+        .industry-content h3 {
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .industry-content p {
+
+            color: #666;
+
+            line-height: 1.8;
+
+        }
+
+
+
+        @media(max-width:768px) {
+
+            .industry-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="hero-wrap">
+
+                <div class="hero-left">
+
+                    <h1>
+
+                        Industrial Tool Repair,
+                        Calibration &
+                        Maintenance Services
+
+                    </h1>
+
+                    <p>
+
+                        Reduce production downtime with expert repair and technical support.
+
+                    </p>
+
+                    <br>
+
+                    <a class="btn" href="#form">
+
+                        Request Service
+
+                    </a>
+
+                    <div class="badges">
+
+                        <div class="badge">
+
+                            Fast Repair
+
+                        </div>
+
+                        <div class="badge">
+
+                            Calibration
+
+                        </div>
+
+                        <div class="badge">
+
+                            Spare Parts
+
+                        </div>
+
+                        <div class="badge">
+
+                            Expert Support
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-right">
+
+                    <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section>
+
+        <div class="container">
+
+            <h2 class="section-title">
+
+                Our Services
+
+            </h2>
+
+            <div class="service-grid">
+
+
+                <div class="service-card">
+
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837">
+
+                    <div class="service-content">
+
+                        <h3>
+
+                            Tool Repair
+
+                        </h3>
+
+                        <p>
+
+                            Repair industrial assembly tools and screwdrivers.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="service-card">
+
+                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952">
+
+                    <div class="service-content">
+
+                        <h3>
+
+                            Calibration
+
+                        </h3>
+
+                        <p>
+
+                            Torque verification and testing services.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="service-card">
+
+                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952">
+
+                    <div class="service-content">
+
+                        <h3>
+
+                            Preventive Maintenance
+
+                        </h3>
+
+                        <p>
+
+                            Reduce failures and improve productivity.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="service-card">
+
+                    <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0">
+
+                    <div class="service-content">
+
+                        <h3>
+
+                            Spare Parts
+
+                        </h3>
+
+                        <p>
+
+                            Access genuine replacement components.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section>
+
+        <div class="container">
+
+            <h2 class="section-title">
+
+                How Our Service Process Works
+
+            </h2>
+
+            <div class="process">
+
+                <div class="step">
+
+                    <div class="circle">
+
+                        STEP 1
+
+                    </div>
+
+                    <h3>
+
+                        Submit Request
+
+                    </h3>
+
+                </div>
+
+                <div class="connector"></div>
+
+                <div class="step">
+
+                    <div class="circle">
+
+                        STEP 2
+
+                    </div>
+
+                    <h3>
+
+                        Inspection
+
+                    </h3>
+
+                </div>
+
+                <div class="connector"></div>
+
+                <div class="step">
+
+                    <div class="circle">
+
+                        STEP 3
+
+                    </div>
+
+                    <h3>
+
+                        Repair
+
+                    </h3>
+
+                </div>
+
+                <div class="connector"></div>
+
+                <div class="step">
+
+                    <div class="circle">
+
+                        STEP 4
+
+                    </div>
+
+                    <h3>
+
+                        Delivery
+
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 
+    <section>
+
+        <div class="container">
+
+            <h2 class="section-title">
+
+                Why Choose Us
+
+            </h2>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    Experienced Engineers
+
+                </div>
+
+                <div class="card">
+
+                    Fast Turnaround
+
+                </div>
+
+                <div class="card">
+
+                    Genuine Parts
+
+                </div>
+
+                <div class="card">
+
+                    Industrial Expertise
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section> -->
+
+    <section class="why-us">
+
+        <div class="container">
+
+            <h2 class="section-title">
+
+                Why Choose Us
+
+            </h2>
+
+
+            <div class="why-grid">
+
+
+                <div class="why-card">
+
+                    <div class="why-icon">
+
+                        01
+
+                    </div>
+
+                    <div class="why-content">
+
+                        <h3>
+
+                            Experienced Engineers
+
+                        </h3>
+
+                        <p>
+
+                            Technical specialists with expertise in industrial fastening tools, torque systems, and
+                            assembly equipment.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="why-card">
+
+                    <div class="why-icon">
+
+                        02
+
+                    </div>
+
+                    <div class="why-content">
+
+                        <h3>
+
+                            Faster Turnaround Time
+
+                        </h3>
+
+                        <p>
+
+                            Reduce production downtime with quick diagnostics, repair, and servicing support.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="why-card">
+
+                    <div class="why-icon">
+
+                        03
+
+                    </div>
+
+                    <div class="why-content">
+
+                        <h3>
+
+                            Genuine Spare Parts
+
+                        </h3>
+
+                        <p>
+
+                            Use of genuine replacement components for improved reliability and performance.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="why-card">
+
+                    <div class="why-icon">
+
+                        04
+
+                    </div>
+
+                    <div class="why-content">
+
+                        <h3>
+
+                            Industrial Expertise
+
+                        </h3>
+
+                        <p>
+
+                            Support for automotive, electronics, manufacturing, and production environments.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="industries">
+
+        <div class="container">
+
+            <h2 class="section-title">
+
+                Industries We Serve
+
+            </h2>
+
+            <p class="section-sub">
+
+                Supporting industrial assembly, production, and manufacturing environments.
+
+            </p>
+
+
+            <div class="industry-grid">
+
+
+                <div class="industry-card">
+
+                    <div class="industry-image">
+
+                        <img src="images/automotive.jpg">
+
+                    </div>
+
+                    <div class="industry-content">
+
+                        <h3>
+
+                            Automotive Industry
+
+                        </h3>
+
+                        <p>
+
+                            Assembly tools, fastening solutions, repair and calibration support.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="industry-card">
+
+                    <div class="industry-image">
+
+                        <img src="images/electronics.jpg">
+
+                    </div>
+
+                    <div class="industry-content">
+
+                        <h3>
+
+                            Electronics Manufacturing
+
+                        </h3>
+
+                        <p>
+
+                            Precision fastening tools and maintenance solutions.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="industry-card">
+
+                    <div class="industry-image">
+
+                        <img src="images/manufacturing.jpg">
+
+                    </div>
+
+                    <div class="industry-content">
+
+                        <h3>
+
+                            Manufacturing Plants
+
+                        </h3>
+
+                        <p>
+
+                            Production line tool servicing and preventive maintenance.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="industry-card">
+
+                    <div class="industry-image">
+
+                        <img src="images/appliance.jpg">
+
+                    </div>
+
+                    <div class="industry-content">
+
+                        <h3>
+
+                            Appliance Industry
+
+                        </h3>
+
+                        <p>
+
+                            Assembly support for high-volume production operations.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="industry-card">
+
+                    <div class="industry-image">
+
+                        <img src="images/aerospace.jpg">
+
+                    </div>
+
+                    <div class="industry-content">
+
+                        <h3>
+
+                            Precision Engineering
+
+                        </h3>
+
+                        <p>
+
+                            Critical fastening applications requiring repeatable accuracy.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="industry-card">
+
+                    <div class="industry-image">
+
+                        <img src="images/production.jpg">
+
+                    </div>
+
+                    <div class="industry-content">
+
+                        <h3>
+
+                            Production Lines
+
+                        </h3>
+
+                        <p>
+
+                            Tool maintenance and support for continuous operations.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="form">
+
+        <div class="container">
+
+            <div class="form-box">
+
+                <h2>
+
+                    Request Service Support
+
+                </h2>
+
+                <form id="serviceForm">
+
+                    <input placeholder="Name" required>
+
+                    <input placeholder="Company">
+
+                    <input placeholder="Phone">
+
+                    <input placeholder="Tool Model">
+
+                    <textarea placeholder="Describe issue"></textarea>
+
+                    <button class="btn">
+
+                        REQUEST SERVICE
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section>
+
+        <div class="container">
+
+            <h2 class="section-title">
+
+                FAQ
+
+            </h2>
+
+
+            <div class="faq">
+
+                <div class="faq-q">
+
+                    How long does repair take?
+
+                </div>
+
+                <div class="faq-a">
+
+                    Depends upon inspection.
+
+                </div>
+
+            </div>
+
+
+            <div class="faq">
+
+                <div class="faq-q">
+
+                    Do you provide calibration certificates?
+
+                </div>
+
+                <div class="faq-a">
+
+                    Yes.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="cta">
+
+        <h2>
+
+            Need Technical Support?
+
+        </h2>
+
+        <br>
+
+        <a class="btn" href="#form">
+
+            Talk To Expert
+
+        </a>
+
+    </section>
+
+
+
+    <footer>
+
+        Industrial Tool Service Solutions
+
+    </footer>
+
+
+    <div class="sticky">
+
+        <a href="#form">
+
+            Get Support
+
+        </a>
+
+    </div>
+
+
+
+    <script>
+
+        document
+            .querySelectorAll(".faq-q")
+            .forEach(q => {
+
+                q.onclick = () => {
+
+                    let a =
+                        q.nextElementSibling;
+
+                    a.style.display =
+                        a.style.display === "block"
+                            ?
+                            "none"
+                            :
+                            "block";
+
+                }
+
+            })
+
+
+
+        document
+            .getElementById("serviceForm")
+            .addEventListener(
+                "submit",
+                function (e) {
+
+                    e.preventDefault();
+
+                    alert(
+                        "Service Request Submitted"
+                    );
+
+                })
+
+    </script>
+
+
+</body>
+
+</html>
+```
