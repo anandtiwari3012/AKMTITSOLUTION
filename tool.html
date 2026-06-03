@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Angle Head Screwdriver EXACT 12V-12-400</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #0066ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin: 10px 10px 0 0;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: #004acc;
+        }
+
+        .hero {
+
+            background:
+                linear-gradient(rgba(0, 0, 0, .65),
+                    rgba(0, 0, 0, .65)),
+                url("https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1500&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            color: white;
+        }
+
+        .hero-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 320px;
+        }
+
+        .hero-img {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-img img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            background: white;
+            padding: 20px;
+        }
+
+        .badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .badge {
+            background: #ffffff20;
+            padding: 10px 14px;
+            border-radius: 30px;
+            font-size: 14px;
+        }
+
+        .spec-bar {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: -40px;
+            position: relative;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+        }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .05);
+
+        }
+
+        table {
+            width: 100%;
+            background: white;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        td {
+            padding: 18px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .form-box {
+
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .05);
+
+        }
+
+        input,
+        textarea,
+        select {
+
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+
+        }
+
+        textarea {
+            height: 120px;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-q {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .faq-a {
+            display: none;
+            padding: 0 20px 20px;
+        }
+
+        .sticky {
+
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+
+        }
+
+        .sticky a {
+
+            padding: 18px 25px;
+            background: #ff5c00;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        @media(max-width:768px) {
+
+            .hero-wrap {
+                flex-direction: column;
+            }
+
+        }
+        
+.description{
+
+background:white;
+
+}
+
+.description-wrap{
+
+background:white;
+
+padding:40px;
+
+border-radius:12px;
+
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+
+}
+
+.description-content p{
+
+margin-bottom:20px;
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#555;
+
+}
+
+
+
+.video-section{
+
+background:#f5f7fa;
+
+text-align:center;
+
+}
+
+.video-wrapper{
+
+position:relative;
+
+padding-bottom:56.25%;
+
+height:0;
+
+overflow:hidden;
+
+border-radius:12px;
+
+margin-top:30px;
+
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.video-wrapper iframe{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+border:0;
+
+}
+
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="hero-wrap">
+
+                <div class="hero-text">
+
+                    <h1>Precision Angle Head Screwdriver For Industrial Assembly</h1>
+
+                    <p>
+
+                        Bosch EXACT 12V-12-400 Cordless Angle Screwdriver engineered for precise industrial fastening
+                        applications.
+
+                    </p>
+
+                    <a href="#form" class="btn">Request Quote</a>
+
+                    <a href="#specs" class="btn">View Specs</a>
+
+                    <div class="badges">
+
+                        <div class="badge">Torque Controlled</div>
+
+                        <div class="badge">Industrial Grade</div>
+
+                        <div class="badge">Compact Design</div>
+
+                        <div class="badge">Fast Delivery</div>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-img">
+
+                    <img src="https://coretooltech.com/wp-content/uploads/2022/09/angle-head-screwdriver.png">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="container">
+
+        <div class="spec-bar">
+
+            <div class="spec-grid">
+
+                <div>
+
+                    <h3>3–10 Nm</h3>
+
+                    Torque Range
+
+                </div>
+
+                <div>
+
+                    <h3>74–370</h3>
+
+                    RPM
+
+                </div>
+
+                <div>
+
+                    <h3>12V</h3>
+
+                    Battery Platform
+
+                </div>
+
+                <div>
+
+                    <h3>~1kg</h3>
+
+                    Weight
+
+                </div>
+
+                <div>
+
+                    <h3>Angle Head</h3>
+
+                    Design
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <section>
+
+        <div class="container">
+
+            <h2>Why Choose This Tool?</h2>
+
+            <div class="card-grid">
+
+                <div class="card">
+
+                    <h3>Precision Torque</h3>
+
+                    Repeatable fastening accuracy.
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Compact Design</h3>
+
+                    Access hard to reach locations.
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Lightweight</h3>
+
+                    Reduce operator fatigue.
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Production Ready</h3>
+
+                    Built for industrial assembly.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="container">
+
+            <h2>Applications</h2>
+
+            <div class="card-grid">
+
+                <div class="card">Automotive Assembly</div>
+
+                <div class="card">Electronics Manufacturing</div>
+
+                <div class="card">Production Lines</div>
+
+                <div class="card">Precision Assembly</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="specs">
+
+        <div class="container">
+
+            <h2>Technical Specifications</h2>
+
+            <table>
+
+                <tr>
+
+                    <td>Model</td>
+
+                    <td>EXACT 12V-12-400</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Torque Range</td>
+
+                    <td>3–10 Nm</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Maximum Torque</td>
+
+                    <td>12 Nm</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>RPM</td>
+
+                    <td>74–370</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Battery</td>
+
+                    <td>12V</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Weight</td>
+
+                    <td>Approx 1kg</td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+    </section>
+    <section class="description">
+
+        <div class="container">
+
+            <h2>Detailed Product Description</h2>
+
+            <div class="description-wrap">
+
+                <div class="description-content">
+
+                    <p>
+
+                        The Angle EXACT 12V-12-400 cordless angle screwdriver is designed for industrial assembly
+                        operations requiring high precision fastening and repeatable torque performance.
+
+                    </p>
+
+                    <p>
+
+                        Its compact angle-head design enables operators to access confined spaces where standard
+                        screwdrivers cannot operate efficiently. This makes it suitable for automotive production lines,
+                        electronics manufacturing, appliance assembly, and precision industrial applications.
+
+                    </p>
+
+                    <p>
+
+                        Built with torque-controlled shutoff technology, the tool helps reduce fastening errors,
+                        improves process consistency, and minimizes costly rework during production.
+
+                    </p>
+
+                    <p>
+
+                        The lightweight ergonomic construction helps reduce operator fatigue during long production
+                        cycles while maintaining fastening accuracy and reliability.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="video-section">
+
+        <div class="container">
+
+            <h2>Watch Product Demonstration</h2>
+
+            <p>
+
+                See how the Angle EXACT 12V-12-400 performs in industrial assembly applications.
+
+            </p>
+
+            <div class="video-wrapper">
+
+                <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Product Video" allowfullscreen>
+
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="form">
+
+        <div class="container">
+
+            <div class="form-box">
+
+                <h2>Request Pricing / Get Quote</h2>
+
+                <p>Our technical team will contact you shortly.</p>
+
+                <form id="enquiryForm">
+
+                    <input required placeholder="Your Name">
+
+                    <input required placeholder="Company Name">
+
+                    <input required placeholder="Phone Number">
+
+                    <input required placeholder="Email">
+
+                    <select>
+
+                        <option>Industry Type</option>
+
+                        <option>Automotive</option>
+
+                        <option>Manufacturing</option>
+
+                        <option>Electronics</option>
+
+                    </select>
+
+                    <input placeholder="Required Quantity">
+
+                    <textarea placeholder="Application / Requirements"></textarea>
+
+                    <button class="btn">
+
+                        REQUEST QUOTATION
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="container">
+
+            <h2>Frequently Asked Questions</h2>
+
+
+            <div class="faq-item">
+
+                <div class="faq-q">
+
+                    Is battery included?
+
+                </div>
+
+                <div class="faq-a">
+
+                    No. Battery not included.
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <div class="faq-q">
+
+                    Can it be used for production lines?
+
+                </div>
+
+                <div class="faq-a">
+
+                    Yes. Designed for industrial assembly.
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <div class="faq-q">
+
+                    Does it support torque control?
+
+                </div>
+
+                <div class="faq-a">
+
+                    Yes. Built for precision fastening.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <h2>Looking For Industrial Torque Solutions?</h2>
+
+        <p>
+
+            Get Technical Consultation + Pricing Today
+
+        </p>
+
+    </footer>
+
+
+    <div class="sticky">
+
+        <a href="#form">
+
+            Get Quote
+
+        </a>
+
+    </div>
+
+
+    <script>
+
+
+        document.querySelectorAll(".faq-q").forEach(q => {
+
+            q.addEventListener("click", () => {
+
+                const ans = q.nextElementSibling;
+
+                ans.style.display =
+                    ans.style.display === "block"
+                        ?
+                        "none"
+                        :
+                        "block";
+
+            })
+
+        })
+
+
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+            anchor.addEventListener('click', function (e) {
+
+                e.preventDefault();
+
+                document.querySelector(
+                    this.getAttribute('href')
+                ).scrollIntoView({
+
+                    behavior: 'smooth'
+
+                })
+
+            })
+
+        })
+
+
+
+        document.getElementById("enquiryForm")
+            .addEventListener("submit", function (e) {
+
+                e.preventDefault();
+
+                alert(
+                    "Thank You! We received your enquiry."
+                );
+
+            })
+
+    </script>
+
+</body>
+
+</html>
